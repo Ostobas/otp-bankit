@@ -1,0 +1,79 @@
+/*--------------------
+        Body
+---------------------*/
+body {
+  line-height: 1.5;
+  font-size: 1rem;
+  background-color: #eceff1;
+  color: #525d6b;
+  font-family: 'Roboto', sans-serif;
+}
+/*--------------------
+        Headings
+---------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: inherit;
+  color: inherit;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; } 
+h4 { font-size: 1.5rem; } 
+h5 { font-size: 1.25rem; } 
+h6 { font-size: 1rem; }
+/*-----------------------------
+        Responsive font sizes
+-------------------------------*/
+@media screen and (min-width: 768px) {
+  html { font-size: 16px; }
+}
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  html { font-size: 14px; }
+}
+@media screen and (max-width: 576px) {
+  html { font-size: 14px; }
+}
+/*------------------------
+        Text decoration
+--------------------------*/
+.info {
+  color: #808080;
+}
+.info.dark {
+  color: #cbced2;
+}
+.info.light {
+  color: #edeef0;
+}
+.info + .btn, .small + .btn,
+ .info + a > .btn, .small + a > .btn {
+  margin-top: 1rem;
+}
+.important {
+  font-size: 250%;
+  font-weight: 700;
+}
+/*------------------------
+        Scroll bar
+--------------------------*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777; 
+}
