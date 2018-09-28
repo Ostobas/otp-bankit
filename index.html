@@ -22,8 +22,12 @@
     <link rel="shortcut icon" href="./img/favicon.png">
     <link rel="stylesheet" type="text/css" href="./css/0-reset.css">
     <link rel="stylesheet" type="text/css" href="./css/1-grid.css" />
+    <link rel="stylesheet" type="text/css" href="./css/2-nav.css" />
+    <link rel="stylesheet" type="text/css" href="./css/3-button.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-cookie-banner.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-footer.css" />
+    <link rel="stylesheet" type="text/css" href="./css/3-jumbotron.css" />
+    <link rel="stylesheet" type="text/css" href="./css/3-modal.css" />
     <link rel="stylesheet" type="text/css" href="./css/4-main.css" />
 </head>
 
@@ -45,7 +49,7 @@
         ga('send', 'pageview');
     </script>
 
-    <nav id="topNav" class="nav fixed top">
+    <nav id="topNav" class="nav top light">
         <div class="container">
             <a class="brand" href="/">
                 <span class="logo" alt="logo"></span>
@@ -75,23 +79,13 @@
                             <button class="btn danger">{nav.signup}</button>
                         </a>
                     </li>
-                    <li id="langSelect" class="item-like">
-                        <a class="link">
-                            <i class="fas fa-globe"></i>
-                            <span class="text">{nav.language.text}</span>
-                        </a>
-                        <div class="dropdown">
-                            <div onclick="changeLang('hu')">{nav.language.hun}</div>
-                            <div onclick="changeLang('en')">{nav.language.eng}</div>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <section id="header">
-        <div class="page-header filter dark">
+        <div class="page-header">
             <div class="container">
                 <div class="jumbotron left" data-aos="fade-right">
                     <h1>{pageHeader.title}<br><span class="typed-text"></span></h1>

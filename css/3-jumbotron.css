@@ -1,0 +1,19 @@
+/*--------------------
+        Jumbotron
+---------------------*/
+.jumbotron {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+.jumbotron.left {
+    text-align: left;
+}
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 4rem 2rem;
+    }
+}
+.jumbotron .title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}

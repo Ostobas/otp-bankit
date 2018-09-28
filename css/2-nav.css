@@ -1,0 +1,185 @@
+/*--------------------
+        Nav
+---------------------*/
+nav.nav {
+    position: relative;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    transition: .4s background-color ease-out 0s, .4s padding ease-out 0s;
+    padding: .5rem 0;
+}
+.nav .right {
+    justify-content: flex-end;
+}
+.nav.fixed {
+    position: fixed;
+    z-index: 90;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.nav.top {
+    top: 0;
+}
+.nav.bottom {
+    bottom: 0;
+}
+/*--------------------
+        Container
+---------------------*/
+.nav > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*--------------------
+        Collapse
+---------------------*/
+.nav .collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    display: none;
+}
+/*--------------------
+        Nav items
+---------------------*/
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+.nav .collapse ul {
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+.nav .link {
+    display: block;
+    padding: .5rem;
+    cursor: pointer;
+}
+/*-----------------------
+        NOT mobile view
+--------------------------*/
+@media (min-width: 576px) {
+    .nav .container {
+        flex-wrap: nowrap;
+    }
+    .nav .collapse {
+        display: -ms-flexbox;
+        display: flex; 
+    }
+    .nav ul, .nav .collapse > ul {
+        align-items: center;
+        padding: 0;
+    }
+    .nav .link {
+        padding: .5rem 1.2rem;
+    }
+    .nav button.toggle {
+        display: none;
+    }
+}
+/*---------------------------
+        Collapsing animation
+-----------------------------*/
+.nav .collapse.collapsing, .nav .collapse.active {
+    display: block;
+}
+.nav .collapse.collapsing > ul, .nav .collapse.active > ul {
+    flex-direction: column;
+}
+.nav .collapse.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: .3s height ease-out;
+}
+/*--------------------
+        Brand
+---------------------*/
+.nav .brand {
+    display: flex;
+    align-items: center;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #fff;
+}
+.nav .brand .title {
+    font-size: 1rem;
+}
+.nav .brand .logo {
+    display: inline-block;
+    margin-right: .75rem;
+    background-position: center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+/*--------------------
+        Toggle
+---------------------*/
+.nav .toggle-icon {
+    font-size: 2.5rem;
+}
+/*--------------------
+        Colors
+---------------------*/
+.nav .item, .nav .toggle-icon, .nav .item-like .link{
+    color: rgba(255,255,255,.5);
+}
+.nav .item:hover, .nav .item-like:hover .link{
+    color: rgba(255,255,255,.75);
+}
+.nav .item.active, .nav .item-like.active .link{
+    color: #fff;
+}
+.nav.light {
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1);
+}
+.nav.light .brand {
+    color: rgba(0,0,0,.9);
+}
+.nav.light .toggle-icon {
+    color: rgba(0, 0, 0, .7);
+}
+.nav.light .item, .nav.light .item-like .link {
+    color: rgba(0,0,0,.5);
+}
+.nav.light .item:hover, .nav.light .item-like .link:hover {
+    color: rgba(0,0,0,.75);
+}
+.nav.light .item.active, .nav.light .item-like .link.active {
+    color: rgba(0,0,0,.9);
+}
+/*--------------------
+        Small nav
+---------------------*/
+@media (min-width: 576px) {
+    .nav.small {
+        padding: 0;
+    }
+    .nav.small .brand .logo {
+        width: 24px;
+        height: 24px;
+        transition: .4s width ease-out 0s, .4s height ease-out 0s;
+    }
+    .nav.small .brand .title, .nav.small .item, .nav.small .btn {
+        font-size: 80%;
+        transition: .4s font-size ease-out 0s;
+    }
+}
