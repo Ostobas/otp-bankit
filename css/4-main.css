@@ -60,20 +60,3 @@ h6 { font-size: 1rem; }
   font-size: 250%;
   font-weight: 700;
 }
-/*------------------------
-        Scroll bar
---------------------------*/
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb {
-  background: #bbb;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #777; 
-}
