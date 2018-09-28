@@ -16,14 +16,14 @@ function toggleDropdown(dropdown) {
     dropdown.classList.toggle('active')
 }
 
-// Build up the reference images
+// Build up the partner images
 ;(function buildRefImages(num) {
     // Find the img grid
-    var imgGrid = document.querySelector('#refImgGrid')
+    var imgGrid = document.querySelector('#partnerImgGrid')
     // Return if the grid is not found
     if (!imgGrid) return
     // Set the source
-    var src = './img/refs/ref'
+    var src = './img/partners/p'
     // Extension
     var ext = '.png'
     var img
@@ -37,52 +37,52 @@ function toggleDropdown(dropdown) {
         // Add data-src, cause of lazy loading
         img.dataset.src = src + (i + 1) + ext
         img.classList.add('lazy')
-        img.alt = 'References'
+        img.alt = 'Partner'
         imgGrid.appendChild(img)
     }
 })(8)
 
-// Lazy loading
-document.addEventListener('DOMContentLoaded', function () {
-    // Create an arra of imgaes with lazy classes
-    var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'))
-    var active = false
+// // Lazy loading
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Create an arra of imgaes with lazy classes
+//     var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'))
+//     var active = false
 
-    // Create the function
-    var lazyLoad = function () {
-        if (active === false) {
-            active = true
+//     // Create the function
+//     var lazyLoad = function () {
+//         if (active === false) {
+//             active = true
 
-            setTimeout(function () {
-                lazyImages.forEach(function (lazyImage) {
-                    // The imgage is entering the screen
-                    if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== 'none') {
-                        // Set the src attribute from the data-src
-                        lazyImage.src = lazyImage.dataset.src
-                        // Remove the class
-                        lazyImage.classList.remove('lazy')
+//             setTimeout(function () {
+//                 lazyImages.forEach(function (lazyImage) {
+//                     // The imgage is entering the screen
+//                     if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== 'none') {
+//                         // Set the src attribute from the data-src
+//                         lazyImage.src = lazyImage.dataset.src
+//                         // Remove the class
+//                         lazyImage.classList.remove('lazy')
 
-                        // Remove the image from the array
-                        lazyImages = lazyImages.filter(function (image) {
-                            return image !== lazyImage
-                        })
+//                         // Remove the image from the array
+//                         lazyImages = lazyImages.filter(function (image) {
+//                             return image !== lazyImage
+//                         })
 
-                        // Check if the array is empty, then remove the event listeners
-                        if (lazyImages.length === 0) {
-                            document.removeEventListener('scroll', lazyLoad)
-                            window.removeEventListener('resize', lazyLoad)
-                            window.removeEventListener('orientationchange', lazyLoad)
-                        }
-                    }
-                })
+//                         // Check if the array is empty, then remove the event listeners
+//                         if (lazyImages.length === 0) {
+//                             document.removeEventListener('scroll', lazyLoad)
+//                             window.removeEventListener('resize', lazyLoad)
+//                             window.removeEventListener('orientationchange', lazyLoad)
+//                         }
+//                     }
+//                 })
 
-                active = false
-            }, 200)
-        }
-    }
+//                 active = false
+//             }, 200)
+//         }
+//     }
 
-    // Add the event listeners
-    document.addEventListener('scroll', lazyLoad)
-    window.addEventListener('resize', lazyLoad)
-    window.addEventListener('orientationchange', lazyLoad)
-})
+//     // Add the event listeners
+//     document.addEventListener('scroll', lazyLoad)
+//     window.addEventListener('resize', lazyLoad)
+//     window.addEventListener('orientationchange', lazyLoad)
+// })

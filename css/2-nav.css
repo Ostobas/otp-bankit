@@ -125,7 +125,8 @@ nav.nav {
     margin-right: .75rem;
     background-position: center center;
     background-size: cover;
-    width: 30px;
+    background-color: darkkhaki;
+    width: 70px;
     height: 30px;
     flex-shrink: 0;
 }

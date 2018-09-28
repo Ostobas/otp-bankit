@@ -3,8 +3,7 @@
 
 <head>
     <title>{head.title}</title>
-    <meta name="description" content="{head.description}"
-    />
+    <meta name="description" content="{head.description}"/>
     <meta name="keywords" content="{head.keywords}" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="hu" />
@@ -29,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="./css/3-jumbotron.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-modal.css" />
     <link rel="stylesheet" type="text/css" href="./css/4-main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/5-scpecial.css" />
 </head>
 
 <body>
@@ -53,7 +53,6 @@
         <div class="container">
             <a class="brand" href="/">
                 <span class="logo" alt="logo"></span>
-                <span class="title">{nav.title}</span>
             </a>
             <button class="toggle" type="button" aria-label="collapse">
                 <span class="toggle-icon">
@@ -63,20 +62,25 @@
             <div class="collapse right">
                 <ul>
                     <li class="item">
-                        <a class="link" href="#getStarted">{nav.getStarted}</a>
+                        <a class="link" href="/about">A versenyről</a>
                     </li>
                     <li class="item">
-                        <a class="link" href="#products">{nav.products}</a>
+                        <a class="link" href="/timing">Időzítés</a>
                     </li>
                     <li class="item">
-                        <a class="link" href="#pricing">{nav.pricing}</a>
+                        <a class="link" href="/carrier">OTP IT karrier</a>
                     </li>
                     <li class="item">
-                        <a class="link" href="#login" data-target="#loginModal">{nav.login}</a>
+                        <a class="link" href="/participants">Résztvevők</a>
                     </li>
                     <li class="item my-1-xs">
-                        <a class="link" href="#signup" data-target="#signUpModal">
-                            <button class="btn danger">{nav.signup}</button>
+                        <a class="link" href="#login" data-target="#loginModal">
+                            <button class="btn trans">Bejelentkezés</button>
+                        </a>
+                    </li>
+                    <li class="item my-1-xs">
+                        <a class="link" href="#">
+                            <button class="btn primary">Regisztráció</button>
                         </a>
                     </li>
                 </ul>
@@ -87,56 +91,83 @@
     <section id="header">
         <div class="page-header">
             <div class="container">
-                <div class="jumbotron left" data-aos="fade-right">
-                    <h1>{pageHeader.title}<br><span class="typed-text"></span></h1>
+                <div class="jumbotron left">
+                    <h1>Játssz a csúcson!<br><span class="typed-text"></span></h1>
                     <div class="row">
                         <div class="col-md-6">
-                            <p>{pageHeader.subTitle}</p>
+                            <p>Az OTP BankIT Competition egy új, nyelvfüggetlen programozóverseny, játékos szakmai feladatokkal.</p>
                         </div>
                     </div>
-                    <button class="btn danger mt-3" data-target="#signUpModal">{pageHeader.btn}</button>
+                    <button class="btn danger mt-3">Jelentkezés október 30-ig</button>
+                    <button class="btn trans mt-3">Warm-up game</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="faces">
+                        <div id="faceImgGrid" class="img-grid"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="line">
+                        <p>A versenyre bárki jelentkezhet,<br><span class="highlight">2-4 fős csapatokban</span></p>
+                        <button class="btn danger">Jelentkezem</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="about">
         <div class="container">
-            <div class="jumbotron">
-                <h2 class="title">{about.title}</h2>
-                <p class="info">{about.subTitle1}</p>
-                <p class="info">{about.subTitle2}</p>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card" data-aos="fade-right">
-                        <span class="icon c-green">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </span>
-                        <h3>{about.advantages.item1.title}</h3>
-                        <p class="info">{about.advantages.item1.subTitle}</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" data-aos="fade-right">
-                        <span class="icon c-yellow">
-                            <i class="fas fa-trophy"></i>
-                        </span>
-                        <h3>{about.advantages.item2.title}</h3>
-                        <p class="info">{about.advantages.item2.subTitle}</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" data-aos="fade-right">
-                        <span class="icon c-navy">
-                            <i class="fas fa-mobile-alt"></i>
-                        </span>
-                        <h3>{about.advantages.item3.title}</h3>
-                        <p class="info">{about.advantages.item3.subTitle}</p>
+            <div class="jumbotron left">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Az online selejtezőt követően a 24 legjobb csapat élő döntőben mérkőzhet meg egymással.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section id="awards">
+        <div class="container">
+            <h2 class="title">Díjazás</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <p class="info">1. díj</p>
+                        <h3 class="important">500 000 Ft</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <p class="info">2. díj</p>
+                        <h3>250 000 Ft</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <p class="info">3. díj</p>
+                        <h3>125 000 Ft</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partners">
+            <div class="container">
+                <div class="partner-logos">
+                    <div id="partnerImgGrid" class="img-grid"></div>
+                </div>
+                <div class="text-center">
+                    <div class="d-inline mr-1">Szervező</div>
+                    <img src="./img/partners/ecosim_logo.png" alt="Ecosim">
+                </div>
+            </div>
+        </section>
     <section id="modals">
         <div id="loginModal" class="modal small">
             <div class="dimmer">
@@ -174,57 +205,12 @@
     <footer id="footer" class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <h3>{footer.col1.title}</h3>
-                    <ul class="info dark">
-                        <li>{footer.col1.about}</li>
-                        <li>{footer.col1.services}</li>
-                        <li>{footer.col1.team}</li>
-                        <li>{footer.col1.careers}</li>
-                        <li>{footer.col1.contact}</li>
-                    </ul>
+                <div class="col-sm-2">
                 </div>
-                <div class="col-sm-4">
-                    <h3>{footer.col2.title}</h3>
-                    <ul class="info dark">
-                        <li>{footer.col2.training}</li>
-                        <li>{footer.col2.competition}</li>
-                        <li>{footer.col2.event}</li>
-                        <li>{footer.col2.championship}</li>
-                        <li>{footer.col2.simulation}</li>
-                    </ul>
+                <div class="col-sm-8">
                 </div>
-                <div class="col-sm-4">
-                    <h3>{footer.col3.title}</h3>
-                    <ul class="info dark">
-                        <li>
-                            <a href="mailto:support@ecosim.hu">
-                                <i class="fas fa-envelope"></i>{footer.col3.support}</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/company/ecosim-business-simulations---training---student-competitions/"
-                                target="_blank" rel="noopener">
-                                <i class="fab fa-linkedin-in"></i>{footer.col3.linkedin}</a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/EcoSimhu" target="_blank" rel="noopener">
-                                <i class="fab fa-facebook"></i>{footer.col3.facebook}</a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/user/ecosimhu" target="_blank" rel="noopener">
-                                <i class="fab fa-youtube"></i>{footer.col3.youtube}</a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/ecosimhu/" target="_blank" rel="noopener">
-                                <i class="fab fa-instagram"></i>{footer.col3.instagram}</a>
-                        </li>
-                    </ul>
+                <div class="col-sm-2">
                 </div>
-            </div>
-            <div class="bottom">
-                <a href='{setup.policy.sefUrl_}' target='_blank' rel='noopener'>{footer.privacy}</a>
-                <span class="divider"> | </span>
-                <span>{footer.copyright}</span>
             </div>
         </div>
     </footer>
