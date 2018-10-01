@@ -1,0 +1,35 @@
+.page-header {
+    background: url(../img/bg.png) no-repeat center center;
+    background-color: #4e84c4;
+    background-size: cover;
+    color: #fff;
+}
+#faceImgGrid .image {
+    position: relative;
+}
+#faceImgGrid .image:nth-child(odd) {
+    top: 10px;
+}
+#faceImgGrid .image:nth-child(even) {
+    top: -10px;
+}
+#about {
+    background: url(../img/bg_about.png) no-repeat center center;
+    background-color: #4e84c4;
+    background-size: cover;
+    color: #fff;
+    padding: 1.5rem 0;
+}
+.logo-dark {
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/logo_dark.png);
+    width: 142px;
+    height: 35px;
+    flex-shrink: 0;
+    margin: 1.5625rem 0;
+}
+.divider-right {
+    border-right: 1px solid rgba(256, 256, 256, .5);
+}

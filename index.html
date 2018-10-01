@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="./css/3-modal.css" />
     <link rel="stylesheet" type="text/css" href="./css/4-main.css" />
     <link rel="stylesheet" type="text/css" href="./css/5-scpecial.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -49,45 +50,59 @@
         ga('send', 'pageview');
     </script>
 
-    <nav id="topNav" class="nav top light">
+    <nav id="topNav" class="nav top">
         <div class="container">
-            <a class="brand" href="/">
-                <span class="logo" alt="logo"></span>
-            </a>
-            <button class="toggle" type="button" aria-label="collapse">
-                <span class="toggle-icon">
-                    <i class="fas fa-bars"></i>
-                </span>
-            </button>
-            <div class="collapse right">
-                <ul>
-                    <li class="item">
-                        <a class="link" href="/about">A versenyről</a>
-                    </li>
-                    <li class="item">
-                        <a class="link" href="/timing">Időzítés</a>
-                    </li>
-                    <li class="item">
-                        <a class="link" href="/carrier">OTP IT karrier</a>
-                    </li>
-                    <li class="item">
-                        <a class="link" href="/participants">Résztvevők</a>
-                    </li>
-                    <li class="item my-1-xs">
-                        <a class="link" href="#login" data-target="#loginModal">
-                            <button class="btn trans">Bejelentkezés</button>
-                        </a>
-                    </li>
-                    <li class="item my-1-xs">
-                        <a class="link" href="#">
-                            <button class="btn primary">Regisztráció</button>
-                        </a>
-                    </li>
-                </ul>
+            <div class="line">
+                <div class="left">
+                    <a class="brand" href="/">
+                        <span class="logo" alt="logo"></span>
+                    </a>
+                </div>
+                <div class="d-flex">
+                    <a class="mr-1" href="#login" data-target="#loginModal">
+                        <button class="btn trans green">Bejelentkezés</button>
+                    </a>
+                    <a href="#">
+                        <button class="btn primary">Regisztráció</button>
+                    </a>
+                    <button class="toggle" type="button" aria-label="collapse">
+                        <span class="toggle-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-grey">
+            <div class="container">
+                <div class="collapse j-center">
+                    <ul>
+                        <li class="item">
+                            <a class="link" href="/versenyrol">A versenyről</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="/idozites">Időzítés</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="/OTP_IT_karrier">OTP IT karrier</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="/resztvevok">Résztvevők</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="/partnereink">Partnereink</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="/kapcsolat">Kapcsolat</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="/media">Média</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
-
     <section id="header">
         <div class="page-header">
             <div class="container">
@@ -95,26 +110,29 @@
                     <h1>Játssz a csúcson!<br><span class="typed-text"></span></h1>
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Az OTP BankIT Competition egy új, nyelvfüggetlen programozóverseny, játékos szakmai feladatokkal.</p>
+                            <h2>Az OTP BankIT Competition egy új, nyelvfüggetlen programozóverseny, játékos szakmai feladatokkal.</h2>
+                            <button class="btn danger mt-3 mr-1">Jelentkezés október 30-ig</button>
+                            <button class="btn trans mt-3">Warm-up game</button>
                         </div>
                     </div>
-                    <button class="btn danger mt-3">Jelentkezés október 30-ig</button>
-                    <button class="btn trans mt-3">Warm-up game</button>
                 </div>
             </div>
         </div>
     </section>
     <section id="banner">
         <div class="container">
-            <div class="row">
+            <div class="row line py-3">
                 <div class="col-md-6">
-                    <div class="faces">
-                        <div id="faceImgGrid" class="img-grid"></div>
+                    <div id="faceImgGrid" class="img-grid line">
+                        <img class="image" src="./img/faces/face-1.png">
+                        <img class="image" src="./img/faces/face-2.png">
+                        <img class="image" src="./img/faces/face-3.png">
+                        <img class="image" src="./img/faces/face-4.png">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="line">
-                        <p>A versenyre bárki jelentkezhet,<br><span class="highlight">2-4 fős csapatokban</span></p>
+                        <h2>A versenyre bárki jelentkezhet,<br><span class="highlight">2-4 fős csapatokban.</span></h2>
                         <button class="btn danger">Jelentkezem</button>
                     </div>
                 </div>
@@ -125,33 +143,36 @@
         <div class="container">
             <div class="jumbotron left">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>Az online selejtezőt követően a 24 legjobb csapat élő döntőben mérkőzhet meg egymással.</p>
+                    <div class="col-md-5">
+                        <h2>Az online selejtezőt követően a 24 legjobb csapat élő döntőben mérkőzhet meg egymással.</h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="awards">
+    <section id="awards" class="bg-light-brown py-2">
         <div class="container">
             <h2 class="title">Díjazás</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <p class="info">1. díj</p>
+                        <img class="image mb-2" src="./img/rewards/reward-1.png">
+                        <h3 class="info">1. díj:</h3>
                         <h3 class="important">500 000 Ft</h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <p class="info">2. díj</p>
-                        <h3>250 000 Ft</h3>
+                        <img class="image mb-2" src="./img/rewards/reward-2.png">
+                        <h3 class="info">2. díj:</h3>
+                        <h3 class="semi-important">250 000 Ft</h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <p class="info">3. díj</p>
-                        <h3>125 000 Ft</h3>
+                        <img class="image mb-2" src="./img/rewards/reward-3.png">
+                        <h3 class="info">3. díj:</h3>
+                        <h3 class="semi-important">125 000 Ft</h3>
                     </div>
                 </div>
             </div>
@@ -159,10 +180,8 @@
     </section>
     <section id="partners">
             <div class="container">
-                <div class="partner-logos">
-                    <div id="partnerImgGrid" class="img-grid"></div>
-                </div>
-                <div class="text-center">
+                <div id="partnerImgGrid" class="line my-3"></div>
+                <div class="j-center a-center">
                     <div class="d-inline mr-1">Szervező</div>
                     <img src="./img/partners/ecosim_logo.png" alt="Ecosim">
                 </div>
@@ -204,12 +223,52 @@
     </section>
     <footer id="footer" class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
+            <div class="row line">
+                <div class="col-sm-3">
+                    <a class="brand" href="/">
+                        <span class="logo-dark" alt="logo"></span>
+                    </a>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-7 divider-right">
+                    <div class="top">
+                        <nav class="nav dark">
+                            <ul>
+                                <li class="item">
+                                    <a class="link" href="/versenyrol">A versenyről</a>
+                                </li>
+                                <li class="item">
+                                    <a class="link" href="/idozites">Időzítés</a>
+                                </li>
+                                <li class="item">
+                                    <a class="link" href="/OTP_IT_karrier">OTP IT karrier</a>
+                                </li>
+                                <li class="item">
+                                    <a class="link" href="/resztvevok">Résztvevők</a>
+                                </li>
+                                <li class="item">
+                                    <a class="link" href="/partnereink">Partnereink</a>
+                                </li>
+                                <li class="item">
+                                    <a class="link" href="/kapcsolat">Kapcsolat</a>
+                                </li>
+                                <li class="item">
+                                    <a class="link" href="/media">Média</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bottom">
+                        &copy; 2018 OTP BANK IT
+                    </div>
                 </div>
                 <div class="col-sm-2">
+                    <div class="d-flex dir-col">
+                        <div class="info light">Kövess minket!</div>
+                        <div>
+                            <a class="link" href="/media"><img src="/img/share/c-facebook.png" alt=""></a>
+                            <a class="link" href="/media"><img src="/img/share/c-google+.png" alt=""></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

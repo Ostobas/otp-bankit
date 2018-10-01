@@ -2,7 +2,7 @@
         Jumbotron
 ---------------------*/
 .jumbotron {
-    padding: 2rem 1rem;
+    padding: 4rem 0;
     text-align: center;
   }
 .jumbotron.left {
@@ -10,7 +10,7 @@
 }
 @media (min-width: 576px) {
     .jumbotron {
-        padding: 4rem 2rem;
+        padding: 6rem 0;
     }
 }
 .jumbotron .title {

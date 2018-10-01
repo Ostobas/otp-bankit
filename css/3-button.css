@@ -9,7 +9,7 @@
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
+    padding: 0.7rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
     box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
@@ -34,15 +34,15 @@
         Primary
 ---------------------*/
 .btn.primary {
-    background-color: #2185d0;
+    background-color: #50af31;
     color: #fff;
 }
 .btn.primary:hover {
-    background-color: #1678c2;
+    background-color: #50af31;
     color: #fff;
 }
 .btn.primary:active {
-    background-color: #1a69a4;
+    background-color: #50af31;
     color: #fff;
 }
 /*--------------------
@@ -64,15 +64,15 @@
         Danger
 ---------------------*/
 .btn.danger {
-    background-color: #dc3545;
+    background-color: #ff6600;
     color: #fff;
 }
 .btn.danger:hover {
-    background-color: #c82333;
+    background-color: #ff6600;
     color: #fff;
 }
 .btn.danger:active {
-    background-color: #bd2130;
+    background-color: #ff6600;
     color: #fff;
 }
 /*--------------------
@@ -104,4 +104,24 @@
 .btn.banana:active {
     background-color: #f6c716;
     color: #525d6b;
+}
+/*--------------------
+        Transparent
+---------------------*/
+.btn.trans {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #fff;
+    color: #fff;
+}
+.btn.trans.green {
+    border-color: #50af31;
+    color: #50af31;
+}
+.btn.banana:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+.btn.banana:active {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
 }

@@ -9,8 +9,6 @@ nav.nav {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    transition: .4s background-color ease-out 0s, .4s padding ease-out 0s;
-    padding: .5rem 0;
 }
 .nav .right {
     justify-content: flex-end;
@@ -63,6 +61,7 @@ nav.nav {
 .nav .link {
     display: block;
     padding: .5rem;
+    font-weight: 600;
     cursor: pointer;
 }
 /*-----------------------
@@ -81,7 +80,7 @@ nav.nav {
         padding: 0;
     }
     .nav .link {
-        padding: .5rem 1.2rem;
+        padding: 1rem 1.2rem;
     }
     .nav button.toggle {
         display: none;
@@ -122,13 +121,13 @@ nav.nav {
 }
 .nav .brand .logo {
     display: inline-block;
-    margin-right: .75rem;
     background-position: center center;
     background-size: cover;
-    background-color: darkkhaki;
-    width: 70px;
-    height: 30px;
+    background-image: url('../img/logo.png');
+    width: 201px;
+    height: 52px;
     flex-shrink: 0;
+    margin: 1.5625rem 0;
 }
 /*--------------------
         Toggle
@@ -140,13 +139,13 @@ nav.nav {
         Colors
 ---------------------*/
 .nav .item, .nav .toggle-icon, .nav .item-like .link{
-    color: rgba(255,255,255,.5);
+    color: rgba(80, 81, 81, 1);
 }
 .nav .item:hover, .nav .item-like:hover .link{
-    color: rgba(255,255,255,.75);
+    color: rgba(80, 81, 81, 1);
 }
 .nav .item.active, .nav .item-like.active .link{
-    color: #fff;
+    color: rgba(80, 81, 81, 1);
 }
 .nav.light {
     background-color: #fff;
@@ -166,6 +165,9 @@ nav.nav {
 }
 .nav.light .item.active, .nav.light .item-like .link.active {
     color: rgba(0,0,0,.9);
+}
+.nav.dark .item, .nav.dark .toggle-icon, .nav.dark .item-like .link{
+    color: rgba(256, 256, 256, .75);
 }
 /*--------------------
         Small nav
