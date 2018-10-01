@@ -33,7 +33,7 @@ function toggleDropdown(dropdown) {
         // Create a new one
         img = new Image
         // Set the placeholder
-        img.src = './img/placeholder-150.jpg'
+        img.src = './img/placeholder-75.jpg'
         // Add data-src, cause of lazy loading
         img.dataset.src = src + (i + 1) + ext
         img.classList.add('lazy')

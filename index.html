@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="./css/3-button.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-cookie-banner.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-footer.css" />
+    <link rel="stylesheet" type="text/css" href="./css/3-form.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-jumbotron.css" />
     <link rel="stylesheet" type="text/css" href="./css/3-modal.css" />
     <link rel="stylesheet" type="text/css" href="./css/4-main.css" />
@@ -62,7 +63,7 @@
                     <a class="mr-1" href="#login" data-target="#loginModal">
                         <button class="btn trans green">Bejelentkezés</button>
                     </a>
-                    <a href="#">
+                    <a href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">
                         <button class="btn primary">Regisztráció</button>
                     </a>
                     <button class="toggle" type="button" aria-label="collapse">
@@ -111,7 +112,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2>Az OTP BankIT Competition egy új, nyelvfüggetlen programozóverseny, játékos szakmai feladatokkal.</h2>
-                            <button class="btn danger mt-3 mr-1">Jelentkezés október 30-ig</button>
+                            <a href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">
+                                <button class="btn danger mt-3 mr-1">Jelentkezés október 30-ig</button>
+                            </a>
                             <button class="btn trans mt-3">Warm-up game</button>
                         </div>
                     </div>
@@ -192,27 +195,27 @@
             <div class="dimmer">
                 <div class="window">
                     <div class="header center">
-                        <div class="title">{modals.login.title}</div>
+                        <div class="title">Bejelentkezés</div>
                     </div>
                     <div class="body">
                         <form class="form" id="loginForm" method="post">
                             <div class="field">
-                                <label>{modals.login.email.text}</label>
-                                <input type="email" name="email" placeholder="{modals.login.email.placeholder}" maxlength="30">
+                                <label>E-mail cím</label>
+                                <input type="email" name="email" placeholder="E-mail cím" maxlength="30">
                             </div>
                             <div class="field">
-                                <label>{modals.login.password.text}</label>
-                                <input type="password" name="password" placeholder="{modals.login.password.placeholder}" maxlength="30">
+                                <label>Jelszó</label>
+                                <input type="password" name="password" placeholder="Jelszó" maxlength="30">
                                 <small>
-                                    <a href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">{modals.login.password.forgot}</a>
+                                    <a href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">Elfelejtetted a jelszavad?</a>
                                 </small>
                             </div>
                             <div class="field center">
-                                <button class="btn wide primary" type="submit">{modals.login.btn}</button>
-                                <small>{modals.login.text}
-                                    <strong>
-                                        <a class="c-red" data-target="#signUpModal">{modals.login.signup}</a>
-                                    </strong>
+                                <button class="btn wide primary" type="submit">Bejelnetkezem</button>
+                                <small>Ha még nincs fiókod: 
+                                    <span class="highlight">
+                                        <a class="c-red" href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">Regisztrálj!</a>
+                                    </span>
                                 </small>
                             </div>
                         </form>

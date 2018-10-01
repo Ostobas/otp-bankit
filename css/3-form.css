@@ -1,0 +1,215 @@
+/*--------------------
+        Form
+---------------------*/
+.form {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.form.small {
+    max-width: 420px;
+}
+/*--------------------
+        Field
+---------------------*/
+.form .field {
+    clear: both;
+    margin-bottom: 1rem;
+}
+.form .field.center {
+    text-align: center;
+}
+.form .field > label {
+    display: block;
+    margin-bottom: .25rem;
+    color: rgba(0,0,0,85);
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: none;
+}
+.form .field small {
+    display: block;
+    color: rgba(0,0,0,.5);
+    margin-top: .35rem;
+}
+/*--------------------
+        Inputs
+---------------------*/
+.form input:not([type]), .form input[type=date], .form input[type=datetime-local], .form input[type=email], .form input[type=file], .form input[type=number], .form input[type=password], .form input[type=search], .form input[type=tel], .form input[type=text], .form input[type=time], .form input[type=url] {
+    width: 100%;
+    vertical-align: middle;
+    outline: 0;
+    appearance: none;
+    line-height: 1.2;
+    padding: .5rem 1rem;
+    background-color: #fff;
+    color: rgba(0,0,0,.85);
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28rem;
+    box-shadow: 0 0 0 0 transparent inset;
+    transition: color .1s ease,border-color .1s ease;
+}
+.form input:not([type]):focus, .form input[type=date]:focus, .form input[type=datetime-local]:focus, .form input[type=email]:focus, .form input[type=file]:focus, .form input[type=number]:focus, .form input[type=password]:focus, .form input[type=search]:focus, .form input[type=tel]:focus, .form input[type=text]:focus, .form input[type=time]:focus, .form input[type=url]:focus {
+    color: rgba(0,0,0,.95);
+    border-color: #85b7d9;
+    background-color: #fff;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.35) inset;
+}
+.form [type=submit] {
+    margin-top: 1rem;
+}
+/*--------------------
+        Placeholder
+---------------------*/
+.form ::placeholder {
+    color: rgba(191, 191, 191, 0.87);
+}
+.form :focus::placeholder {
+    color: rgba(115, 115, 115, 0.87);
+}
+.form .field.invalid ::placeholder {
+    color: #e7bdbc !important;
+}
+.form .field.invalid :focus::placeholder {
+    color: #da9796 !important;
+}
+/*--------------------
+        Checkbox
+---------------------*/
+.form .checkbox {
+    position: relative;
+    display: inline-block;
+    backface-visibility: hidden;
+    outline: 0;
+    min-height: 17px;
+    line-height: 17px;
+    min-width: 17px;
+}
+.form .checkbox input[type=checkbox], .form .checkbox input[type=radio] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 17px;
+    height: 17px;
+}
+.form .checkbox label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    outline: 0;
+    font-size: .9rem;
+    cursor: pointer;
+    color: rgba(0,0,0,.95);
+    user-select: none;
+}
+.form .checkbox label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: .21rem;
+    border: 1px solid #d4d4d5;
+    transition: border .1s ease,opacity .1s ease;
+}
+.form .checkbox.radio label:before {
+    border-radius: 50%;
+}
+.form .checkbox label:hover {
+    color: rgba(0,0,0,.8);
+}
+.form .checkbox label:hover:before {
+    background-color: #fff;
+    border-color: rgba(34,36,38,.35);
+}
+.form .checkbox input[type=checkbox]:focus + label:before,
+.form .checkbox input[type=radio]:focus + label:before {
+    background-color: #fff;
+    border-color: #96c8da;
+}
+.form .checkbox input[type=checkbox]:checked + label:after,
+.form .checkbox input[type=radio]:checked + label:after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,.85);
+}
+.form .checkbox input[type=checkbox]:checked + label:after {
+    left: 4px;
+    top: 8px;
+    width: 3px;
+    height: 3px;
+    box-shadow: 2px 0 0 rgba(0,0,0,.85), 4px 0 0 rgba(0,0,0,.85), 4px -2px 0 rgba(0,0,0,.85), 4px -4px 0 rgba(0,0,0,.85), 4px -6px 0 rgba(0,0,0,.85), 4px -8px 0 rgba(0,0,0,.85);
+    transform: rotate(45deg);   
+}
+.form .checkbox input[type=radio]:checked + label:after {
+    left: 6px;
+    top: 6px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+/*--------------------
+        Validation
+---------------------*/
+.form .field.invalid label {
+    color: #9f3a38;
+}
+.form .field.invalid input:not([type]), .form .field.invalid input[type=date], .form .field.invalid input[type=datetime-local], .form .field.invalid input[type=email], .form .field.invalid input[type=file], .form .field.invalid input[type=number], .form .field.invalid input[type=password], .form .field.invalid input[type=search], .form .field.invalid input[type=tel], .form .field.invalid input[type=text], .form .field.invalid input[type=time], .form .field.invalid input[type=url] {
+    background-color: #fff6f6;
+    border-color: #e0b4b4;
+    color: #9f3a38;
+}
+.form .field.invalid .checkbox label {
+    color: #9f3a38;
+}
+.form .field.invalid .checkbox label:before {
+    background-color: #fff6f6;
+    border-color: #e0b4b4;
+}
+/*-------------------------
+        Validation message
+---------------------------*/
+.form .message {
+    position: relative;
+    font-size: .85rem;
+    margin: 1rem 0;
+    background-color: #f8f8f8;
+    padding: 1rem 1.5rem;
+    line-height: 1.45;
+    color: rgba(0,0,0,.85);
+    transition: opacity .1s ease;
+    border-radius: .28rem;
+    box-shadow: 0 0 0 1px rgba(34,36,38,.22) inset, 0 0 0 0 transparent;
+}
+.form .message.error {
+    background-color: #fff6f6;
+    color: #9f3a38;
+    box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0 0 0 transparent;
+}
+.form .message.success {
+    background-color: #fcfff5;
+    color: #2c662d;
+    box-shadow: 0 0 0 1px #a3c293 inset, 0 0 0 0 transparent;
+}
+.form .message .title {
+    font-weight: 700;
+    margin-bottom: .75rem;
+    font-size: .85rem;
+}
+.form .message li {
+    position: relative;
+    list-style-type: none;
+    margin: 0 0 .3rem 1rem;
+    padding: 0;
+}
+.form .message li:before {
+    position: absolute;
+    content: '•';
+    left: -1rem;
+    top: -1px;
+    height: 100%;
+    vertical-align: baseline;
+}
