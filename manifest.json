@@ -3,12 +3,12 @@
     "short_name": "OTP BankIt",
     "icons": [
       {
-        "src": "/img/manifest-icon-192.png",
+        "src": "src/img/manifest-icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/img/manifest-icon-192.png",
+        "src": "src/img/manifest-icon-192.png",
         "type": "image/png",
         "sizes": "512x512"
       }
