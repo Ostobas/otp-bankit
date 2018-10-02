@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     merge = require('gulp-merge-link'),
+    replace = require('gulp-replace'),
     del = require('del')
 
 gulp.task('clean', function() {
@@ -17,28 +18,11 @@ gulp.task('clean', function() {
 gulp.task('html', function() {
     return gulp.src('index.html')
         .pipe(merge({
-            'css/bundle.css': ['./css/1-ui.min.css', './css/2-style.css', './css/3-fontawesome.css'],
-            'js/app.bundle.js': ['./js/1-ui.js', './js/2-app.js']
+            'css/bundle.css': ['./src/css/*.css'],
+            'js/app.bundle.js': ['./src/js/*.js']
         }))
+        .pipe(replace('./src/img', 'img'))
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('build'))
-})
-
-gulp.task('subhtml', function() {
-    return gulp.src('subPage.html')
-        .pipe(merge({
-            'css/bundle.css': ['./css/1-ui.min.css', './css/2-style.css', './css/3-fontawesome.css'],
-            'js/app.bundle.js': ['./js/1-ui.js', './js/2-app.js']
-        }))
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('build'))
-})
-
-gulp.task('sw', function() {
-    return gulp.src('sw.js')
-        .pipe(uglify().on('error', function(e){
-            console.log(e)
-        }))
         .pipe(gulp.dest('build'))
 })
 
@@ -48,12 +32,12 @@ gulp.task('manifest', function() {
 })
 
 gulp.task('fonts', function() {
-    return gulp.src('fonts/**/*')
+    return gulp.src('src/fonts/**/*')
         .pipe(gulp.dest('build/fonts'))
 })
 
 gulp.task('img', function() {
-    return gulp.src('img/**/*')
+    return gulp.src('src/img/**/*')
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -63,7 +47,7 @@ gulp.task('img', function() {
 })
 
 gulp.task('css', function() {
-    return gulp.src('css/**/*.css')
+    return gulp.src('src/css/**/*.css')
         .pipe(autoprefixer('last 2 version'))
         .pipe(concatCss('bundle.css'))
         .pipe(purgecss({
@@ -75,7 +59,7 @@ gulp.task('css', function() {
 })
 
 gulp.task('js', function() {
-    return gulp.src('js/**/*.js')
+    return gulp.src('src/js/**/*.js')
         .pipe(uglify().on('error', function(e){
             console.log(e)
         }))
@@ -84,5 +68,5 @@ gulp.task('js', function() {
 })
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('html', 'subhtml', 'manifest', 'fonts', 'img', 'css', 'js')
+    gulp.start('html', 'manifest', 'fonts', 'img', 'css', 'js')
 })
