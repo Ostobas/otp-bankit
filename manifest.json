@@ -1,14 +1,14 @@
 {
-    "name": "Edu Business Simulations",
-    "short_name": "Edu",
+    "name": "OTP BankIt Competition",
+    "short_name": "OTP BankIt",
     "icons": [
       {
-        "src": "/i/manifest-icon-192.png",
+        "src": "/img/manifest-icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/i/manifest-icon-512.png",
+        "src": "/img/manifest-icon-192.png",
         "type": "image/png",
         "sizes": "512x512"
       }
@@ -16,5 +16,5 @@
     "start_url": "/",
     "background_color": "#fff",
     "display": "standalone",
-    "theme_color": "#3498db"
+    "theme_color": "#50af31"
   }
