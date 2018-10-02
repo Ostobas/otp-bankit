@@ -1,8 +1,7 @@
 {
-  "name": "edu-landing-page",
+  "name": "otp-bankit",
   "version": "1.0.0",
   "description": "",
-  "main": "3-app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

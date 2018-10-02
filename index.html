@@ -2,16 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-EN">
 
 <head>
-    <title>{head.title}</title>
+    <title>OTP BankIT Competition</title>
     <meta name="description" content="{head.description}"/>
     <meta name="keywords" content="{head.keywords}" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="hu" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3498db">
+    <meta name="theme-color" content="#50af31">
     <meta property="fb:app_id" content="">
-    <meta property="og:title" content="{head.ogtitle}">
+    <meta property="og:title" content="OTP BankIT Competition">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:site_name" content="">
@@ -60,16 +60,18 @@
                     </a>
                 </div>
                 <div class="d-flex">
-                    <a class="mr-1" href="#login" data-target="#loginModal">
+                    <a class="d-none-xs mr-1" href="#login" data-target="#loginModal">
                         <button class="btn trans green">Bejelentkezés</button>
                     </a>
-                    <a href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">
+                    <a class="d-none-xs" href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">
                         <button class="btn primary">Regisztráció</button>
                     </a>
                     <button class="toggle" type="button" aria-label="collapse">
-                        <span class="toggle-icon">
-                            <i class="fas fa-bars"></i>
-                        </span>
+                        <div class="toggle-icon">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
                     </button>
                 </div>
             </div>
@@ -99,6 +101,16 @@
                         <li class="item">
                             <a class="link" href="/media">Média</a>
                         </li>
+                        <li class="item">
+                            <div class="line">
+                                <a class="d-none d-block-xs mr-1" href="#login" data-target="#loginModal">
+                                    <button class="btn trans green">Bejelentkezés</button>
+                                </a>
+                                <a class="d-none d-block-xs" href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">
+                                    <button class="btn primary">Regisztráció</button>
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -124,9 +136,9 @@
     </section>
     <section id="banner">
         <div class="container">
-            <div class="row line py-3">
+            <div class="row a-center py-3">
                 <div class="col-md-6">
-                    <div id="faceImgGrid" class="img-grid line">
+                    <div id="faceImgGrid" class="img-grid line mb-2-xs">
                         <img class="image" src="./img/faces/face-1.png">
                         <img class="image" src="./img/faces/face-2.png">
                         <img class="image" src="./img/faces/face-3.png">
@@ -136,7 +148,9 @@
                 <div class="col-md-6">
                     <div class="line">
                         <h2>A versenyre bárki jelentkezhet,<br><span class="highlight">2-4 fős csapatokban.</span></h2>
-                        <button class="btn danger">Jelentkezem</button>
+                        <a href="https://myaccount.ecosim.hu/" target="blank" rel="noopener">
+                            <button class="btn danger">Jelentkezem</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -183,10 +197,37 @@
     </section>
     <section id="partners">
             <div class="container">
-                <div id="partnerImgGrid" class="line my-3"></div>
+                <div id="partnerImgGrid" class="line my-3">
+                    <a href="https://prohardver.hu/index.html" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-1.png" alt="Partner">
+                    </a>
+                    <a href="https://mobilarena.hu/index.html" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-2.png" alt="Partner">
+                    </a>
+                    <a href="https://itcafe.hu/index.html" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-3.png" alt="Partner">
+                    </a>
+                    <a href="https://masterfield.hu/hu" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-4.png" alt="Partner">
+                    </a>
+                    <a href="http://infha.hu/" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-5.png" alt="Partner">
+                    </a>
+                    <a href="https://simonyi.bme.hu/" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-6.png" alt="Partner">
+                    </a>
+                    <a href="https://ghk.bme.hu/gepesz-szakkollegium" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-7.png" alt="Partner">
+                    </a>
+                    <a href="https://www.inf.u-szeged.hu/" target="blank" rel="noopener">
+                        <img src="./img/partners/partner-8.png" alt="Partner">
+                    </a>
+                </div>
                 <div class="j-center a-center">
                     <div class="d-inline mr-1">Szervező</div>
-                    <img src="./img/partners/ecosim_logo.png" alt="Ecosim">
+                    <a href="https://www.ecosim.hu/" target="blank" rel="noopener">
+                        <img src="./img/partners/ecosim_logo.png" alt="Ecosim">
+                    </a>
                 </div>
             </div>
         </section>
@@ -226,13 +267,13 @@
     </section>
     <footer id="footer" class="footer">
         <div class="container">
-            <div class="row line">
+            <div class="row a-center">
                 <div class="col-sm-3">
                     <a class="brand" href="/">
                         <span class="logo-dark" alt="logo"></span>
                     </a>
                 </div>
-                <div class="col-sm-7 divider-right">
+                <div class="col-sm-7 divider-right d-none-xs">
                     <div class="top">
                         <nav class="nav dark">
                             <ul>
@@ -268,8 +309,8 @@
                     <div class="d-flex dir-col">
                         <div class="info light">Kövess minket!</div>
                         <div>
-                            <a class="link" href="/media"><img src="/img/share/c-facebook.png" alt=""></a>
-                            <a class="link" href="/media"><img src="/img/share/c-google+.png" alt=""></a>
+                            <a class="link" href="/media"><img src="./img/share/c-facebook.png" alt="Facebook"></a>
+                            <a class="link" href="/media"><img src="./img/share/c-google+.png" alt="Google+"></a>
                         </div>
                     </div>
                 </div>

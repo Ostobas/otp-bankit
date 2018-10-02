@@ -6,6 +6,7 @@
 }
 #faceImgGrid .image {
     position: relative;
+    max-width: 25%;
 }
 #faceImgGrid .image:nth-child(odd) {
     top: 10px;
@@ -19,6 +20,21 @@
     background-size: cover;
     color: #fff;
     padding: 1.5rem 0;
+}
+@media (max-width: 576px) {
+    #about {
+        background-position: left center;
+    }
+    #awards {
+        text-align: center;
+    }
+}
+#partnerImgGrid {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#partnerImgGrid img {
+    margin: 1rem;
 }
 .logo-dark {
     display: inline-block;

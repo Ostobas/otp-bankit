@@ -16,31 +16,32 @@ function toggleDropdown(dropdown) {
     dropdown.classList.toggle('active')
 }
 
-// Build up the partner images
-;(function buildRefImages(num) {
-    // Find the img grid
-    var imgGrid = document.querySelector('#partnerImgGrid')
-    // Return if the grid is not found
-    if (!imgGrid) return
-    // Set the source
-    var src = './img/partners/partner-'
-    // Extension
-    var ext = '.png'
-    var img
+// // Build up the partner images
+// ;(function buildRefImages(num) {
+//     // Find the img grid
+//     var imgGrid = document.querySelector('#partnerImgGrid')
+//     // Return if the grid is not found
+//     if (!imgGrid) return
+//     // Set the source
+//     var src = './img/partners/partner-'
+//     // Extension
+//     var ext = '.png'
+//     var img
 
-    // For every image
-    for (var i = 0; i < num; i++) {
-        // Create a new one
-        img = new Image
-        // Set the placeholder
-        img.src = './img/placeholder-75.jpg'
-        // Add data-src, cause of lazy loading
-        img.dataset.src = src + (i + 1) + ext
-        img.classList.add('lazy')
-        img.alt = 'Partner'
-        imgGrid.appendChild(img)
-    }
-})(8)
+//     // For every image
+//     for (var i = 0; i < num; i++) {
+//         // Create a new one
+//         img = new Image
+//         // Set the placeholder
+//         img.src = './img/placeholder-75.jpg'
+//         // Add data-src, cause of lazy loading
+//         img.dataset.src = src + (i + 1) + ext
+//         img.classList.add('lazy')
+//         img.alt = 'Partner'
+
+//         imgGrid.appendChild(img)
+//     }
+// })(8)
 
 // Lazy loading
 document.addEventListener('DOMContentLoaded', function () {
